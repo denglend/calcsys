@@ -43,7 +43,7 @@
 
 
 ###NOTES
-- Be sure to visit the Detached Solutions website - www.detacheds.com
+- Be sure to visit the Detached Solutions website - www.detachedsolutions.com
 - This document is best viewed in a fixed width font.
 - Read Install.txt for information on how to install Calcsys.
 - Be sure to check out cool.txt for cool stuff to do with Calcsys.
