@@ -1,0 +1,117 @@
+Ten Cool Things You Can Do With Calcsys (TCTYCDWC)
+
+1) Enable Lowercase
+2) Display Calcsys in Inverted Text
+3) Protect or Unprotect a Program
+4) Change the Name of a Program
+5) Remote Control your TI-89/92/92+
+6) Draw Circles Fast
+7) Shift the Screen
+8) Chat With Another Calculator
+9) Reset Your RAM
+10) Play a Guessing Game in Hexadecimal
+
+Want to know some stuff that you can actually do with Calcsys?
+If so, read on.
+Numbers in parenthesis indicate the key number which cooresponds to an option.
+Email any questions to: dan@calc.org
+Thanks for using Calcsys!
+
+
+1) Enable Lowercase (no TI-73)
+-First, goto the System Flags section of Calcsys
+-Press Next (6) seven times, so that groups 23-27 are on the screen
+-Choose group get/send (2)
+-Press 3 (so that there is a 1 to the right of "lower case")
+-Lowercase is now enabled (press alpha twice to type in lower case)
+-You can now type in lowercase in TIOS!
+
+2) Display Calcsys in Inverted Text
+-First, goto the System Flags section of Calcsys
+-Press Next (6) once, so that groups 5-9 are on the screen
+-Choose group text (1)
+-Press 3 so that a 1 is shown to the right of "textinverse"
+-Calcsys is now displayed in white on black, instead of black on white!
+
+3) Protect or Unprotect a Program
+-First, goto the VAT section of Calcsys
+-Choose the "Prog/List VAT" (1) option
+-Navigate through the variable lists until your program is on screen
+-Choose the program you want to protect or unprotect (1-5)
+-Press Alpha+P
+-If the program was unprotected, it will now be protected!
+-If the program was protected, it will now be unprotected!
+
+4) Change the Name of a Program
+(note: you can not change the length of the name with this method
+Changing the length of a name is a much more complicated process)
+-First, goto the VAT section of Calcsys
+-Choose the "Prog/List VAT" (1) option
+-Navigate through the variable lists until the program is on screen
+-Choose the program you want to change the name of (1-5)
+-Press Alpha+V (You should be taken to the hex editor)
+-Press left seven times
+-The first character of the name should now be in the top left of the screen
+-Press enter to edit the character
+-Enter in the hex value for the character you want to change it to
+(note: you can find hex values for characters in the Character Set portion
+of Calcsys)
+-Press left again to get to the next character
+-Continue for all the characters in the name
+(note: be sure you don't edit more bytes than there are characters in the name)
+
+5) Remote Control your TI-89/92/92+
+-Read remote.txt for detailed instructions on how to do this!
+
+6) Draw Circles Fast (automatic on TI-73!)
+-Go to the System Flags section of Calcsys
+-Press Next (6) twelve times, so flag groups 3c through 40 are onscreen
+-Choose plotflags3 (1)
+-Press 4, so that there is a 1 to the right of "fastcirc"
+-Press 2nd+Quit to exit back to the TIOS
+-Press Graph to goto the graph screen
+-Press 2nd+Draw to goto the draw menu
+-Choose Circle (9)
+-Choose a center point and radius point for you circle with enter
+-The circle draws in four sections and much faster than normal!
+
+7) Shift the Screen
+-Goto the Port Monitor section of Calcsys
+-Choose Monitor (1)
+-Press right three times and up once
+-You should be on port 10, aka LCD Instr
+-Press Mode, and type 48
+-Your screen is now shifted 8 pixels up!
+-You can try other numbers from 40 to 7F to get different shifts.
+(note: you can return to normal by outputting the value of 40 to
+port 10, or turning your calculator off and then back on again)
+
+8) Chat With Another Calculator
+-Goto the Link Console section of Calcsys
+-Connect your calculator to another TI-83+ running the Link Console
+(note: you can also chat with a 82/83/85/86/89/92/92+ if it is running
+some sort of chat or terminal program such as rterm or fterm)
+-Type as normal
+-Your input should be displayed on the other persons screen and vice versa!
+(note: You may have to change the link input display settings slightly
+use the X,T,(theta),n button and [on]+X,T,(theta),n button to change the
+settings.  Or you could change bits 1 and 2 of asmflags3, which is where the
+settings are stored)
+
+9) Reset Your RAM
+-With a low level program like Calcsys, there are numerous ways to reset
+your RAM (both on purpose and by accident).  I've listed a few below:
+-Output a value of 77 to port 4
+-Output a value of 99 to port 6
+-Do a "J 0000" in the Console
+-Do a "X EE" in the Console
+-Output a value of 10 to port 3 (compliments of MyFel)
+-Output a value of 88 to port 7 to clear ram, and get blue lines (MyFel)
+-There are many more.  Have fun trying to find as many as possible!
+
+10) Play a Guessing Game in Hexadecimal
+(note: This was a previously undocumented secret feature of Calcsys, but I
+decided to document it because its just so much fun!)
+-Goto the Console
+-Type "SMILE"
+-You have a six tries to guess a number between 0 and 63 (hexadecimal)!

@@ -1,0 +1,53 @@
+Calcsys Version History
+
+
+Version 1.3
+-Date: 08/20/01
+-Not too much in fact, this version is mostly just to add TI-83 Plus Silver Edition
+-support (link console).  (Actually, it's turned into a more substantial update than I expected.  I kept finding more things to do)
+-A new sub-section was added to the VAT section: Applications.  (Yes, I know that apps aren't in the VAT.  You think I could implement this if I didn't know? sheesh...).  In this sub-section you can quickly find info on loaded apps, and jump to the Hex Editor with Alpha+H.
+-New Console commands:
+--ROM - Displays address and page of the entry point address you provide
+--DISROM (DR) - Disassembles the routine for the entry point address you provide
+-Some bug fixes:
+--Hopefully all disasembler bugs are gone.  These were all problems with the text or size of IX/IY instructions.
+--VAT types greater than 17 are reported as "Other"
+--TI-73 only VAT types are now supported
+--Menus now exit correctly with the CLEAR button.
+--You can now set the L virtual register in the console
+--SEARCH now searches page zero (thanks to Michael Vincent for that report)
+--SEARCH now works correctly on the Silver Edition
+--You can set/reset bit seven of flags
+
+Version: 1.2
+-Date: 01/08/01
+-Version 1.2 was completely rewritten from scratch.  This means there's a ton of cool new features, right?  Wrong...Oh well.
+-You can no longer log stuff from Port Monitor.  I noticed that logging the ports had absolutely no use, so I took it out.
+-The about screen has been completely changed.  It looks sort of cool now.  The calc info stuff that used to be at the end of the about screen is now in the console.
+-There have been a few changes to the Console, most notably a much nicer input routine, but there's some other stuff too...
+-Console now runs assembly programs much better
+-My favorite change is most likely the addition of the Search capability to the Console.  It lets you search the entire ROM for a string of values.
+-A 16bit find has been added to the Hex Editor, and bookmarks added to both the Hex Editor and Disassembler.
+-The Link Console now has a cursor and can bulk output.
+-Hopefully the few bugs that were left in version 1.1 are now gone.
+-Just about everything runs faster since I coded it better this time around.
+
+Version: 1.1
+-Date: 11/23/99
+-Added Link Console section
+-Moved Calc Info to About section and removed IY info
+-Lots of documentation changes and additions (cool.txt!)
+-Fixed Console APD bug
+-Fixed Complex List/Number VAT bug
+-Fixed [on] bug in Key Value Getkey section bug
+-Fixed get text counter on clear bug
+-Changed a few numbers from decimal to hexadecimal
+
+Version: 1.0 Release 2
+-Date: 11/11/99
+-The application has not been updated at all, but the calcsys.app 
+file was added so that mac users can install calcsys.
+
+Version: 1.0
+-Date: 11/2/99
+-Initial Release

@@ -1,0 +1,99 @@
+Remote Control Your TI-89/TI-92/TI-92+ Calcsys!!
+
+If you connect your TI-83 Plus and a 68k calc via the link port you can
+remotely control the 68k calc!  Input you give in Calcsys will, be sent
+to the 68k calc, and any output from the 68k calc will be sent back to
+Calcsys!
+
+Note:
+-When your 68k calc is in remote mode, it will not respond to any input
+from its keyboard.  To exit from remote mode, you must send a command
+through the linkport.  This is discussed further in this document.  
+(You could also take out the batteries, and then put them back in again,
+however the first method of exiting remote mode is preferable)
+
+---How to set up your calcs for remote control:
+--First, put your TI-83 Plus in Link Console mode.  You'll probably want
+to change the display settings so that only the ascii text is displayed,
+and not the hex values (check calcsys.txt for information on how to use
+the Link Console).
+
+--Next, put your 68k calc in remote mode.  There are two ways to do this.
+The first is manually on the 68k itself, and the other is sending a
+special command code through the link port via Calcsys.  The former is
+easier to do, but the latter is just cooler =)
+
+--Setting your TI-92 or TI-92 Plus into remote mode manually:
+-Get to the homescreen on your calc
+-Press F5 (you should now be on the progIO screen)
+-Press Diamond
+-Press '(' (The left parenthesis button) (a new screen should appear)
+-Press 'R' (As in the letter...)
+-You should now be returned to the homescreen, if so, you are in remote
+mode!
+
+--Setting your TI-89 into remote mode manaully:
+-Get to the homescreen on your calc
+-Press F5 (you should now be on the progIO screen)
+-Press Diamond
+-Press APPS (you should be on a new screen now)
+-Press Alpha
+-Press 'R' (Yes, as in the letter)
+-You should now be returned to the homescreen, if so, you are in remote
+mode!
+
+--Setting you TI-92 or TI-92 Plus into remote mode via Calcsys:
+-Make sure you 68k calc is on the homescreen
+-Enter this string of bytes via the hex byte out function of the Link
+Console
+-$09,$87,$10,$01,$09,$87,$28,$20,$09,$87,$72,$00
+-Your TI-92(+) should now be on the homescreen and in remote mode!
+
+(I don't own a TI-89, so I can't test to see if this works, but my guess
+would be $09,$87,$10,$01,$09,$87,$09,$21,$09,$87,$72,$00)
+
+
+---How to get out of remote mode
+--TI-92 or TI-92 Plus
+-Send these bytes out through Link Console (you must start from the home
+screen)
+-$01,$10,$20,$28,$00,$72
+
+--TI-89
+-Send thse bytes out through Link Console (you must start from the home
+screen)
+-$01,$10,$21,$09,$00,$72
+
+
+---What to do once you are in remote mode
+--Once you are in remote mode, you can make your 68k calc thinks that a
+key was pressed by sending the keyvalue for that key through the link
+port.  The value you send must be a word (2 bytes) long.  The values for
+the keycodes can be found in the back of TI-89/92(+) instruction manual, 
+in one of the apendicies.  The values given there are in decimal, you'll
+have to convert them to hexadecimal so that Link Console can input them
+however.
+
+--Finding the hex values for keys and typing them in can be very tedious
+and boring, so to fix that problem, you can enter in many commonly used
+key presses without even having to worry about the key values.  Each of
+the following will include two keys you have to press in succesion to send
+the desired key value out the port.  (If it says ON+somekey that means you
+have to hold on ON key down while pressing the key)
+
+-A through Z : 2nd, then the letter (ie. 2nd, A)
+-0 through 9 : 2nd, then ON+the number (ie. 2nd, ON+3)
+-Enter       : 2nd, then ON+enter
+-Arrow keys  : ON+Alpha, then ON+arrow key
+-+,-,*,/,^   : 2nd, then ON+operation key
+-misc keys   : 2nd, then one of the top row of keys (ie. 2nd, Y=)
+-more misc   : 2nd, then ON+one of the tope row (ie. 2nd, ON+ZOOM)
+
+--You'll notice that when you do an enter command, any output is sent
+through the link port back to Calcsys, and it will be displayed in the
+bottom portion of the Link Console screen.
+
+-You can do a variety of things in remote mode, from solving math problems
+that the TI-83 Plus can't do, to using the geometry application, to using
+basic programs (I haven't tried assembly programs, but I'm going to assume
+that it wont work :).

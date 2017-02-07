@@ -1,0 +1,16 @@
+---How to install Calcsys
+-Use the graphlink software to insall the calcsys.8xk file
+onto your calculator.  You'll need at least version 2.0 of
+the software, so upgrade if you have an older version.
+
+--If you are having trouble, make sure of the following:
+-Your TI-83 Plus is on the homescreen.
+-You can communicate correctly with your TI-83 Plus using
+the regular graphlink software (if you can't this is a
+problem you have to take up with TI tech support)
+-No other graphlink or application install
+programs are currently running.
+-You have at least 16K of free archive space.
+-Your batteries are not low.
+-Your graphlink is connected to your calculator
+-You are using the latest version of the graphlink software
